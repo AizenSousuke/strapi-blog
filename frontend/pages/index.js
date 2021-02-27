@@ -3,6 +3,9 @@ import Articles from "../components/articles";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
+import marked from "marked";
+import ReactMarkdown from "react-markdown";
+
 
 const Home = ({ articles, categories, homepage }) => {
 	return (
@@ -11,6 +14,7 @@ const Home = ({ articles, categories, homepage }) => {
 			<div className="uk-section">
 				<div className="uk-container uk-container-large">
 					<h1>{homepage.hero.title}</h1>
+					<ReactMarkdown>{homepage.hero.welcomeMessage}</ReactMarkdown>
 					<Articles articles={articles} />
 				</div>
 			</div>
