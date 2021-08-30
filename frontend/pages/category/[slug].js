@@ -15,7 +15,11 @@ const Category = ({ category, categories }) => {
 			<div className="uk-section">
 				<div className="uk-container uk-container-large">
 					<h1>{category.name}</h1>
-					<Articles articles={category.articles} />
+					{category.articles.length > 0 ? (
+						<Articles articles={category.articles} />
+					) : (
+						<h3>There are no articles available for this category</h3>
+					)}
 				</div>
 			</div>
 		</Layout>
