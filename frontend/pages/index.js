@@ -3,7 +3,6 @@ import Articles from "../components/articles";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
-import marked from "marked";
 import ReactMarkdown from "react-markdown";
 
 
