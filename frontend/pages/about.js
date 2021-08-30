@@ -2,11 +2,23 @@ import React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
+import "react-quill/dist/quill.snow.css";
 
 function About({ categories, homepage, about }) {
+	const ReactQuill =
+		typeof window === "object" ? require("react-quill") : () => false;
+	const modules = {
+		toolbar: [],
+	};
 	return (
 		<Layout categories={categories}>
 			<Seo seo={homepage.seo} />
+			<ReactQuill
+				theme="snow"
+				readOnly={true}
+				value={about.profile}
+				modules={modules}
+			/>
 		</Layout>
 	);
 }
