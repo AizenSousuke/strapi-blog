@@ -21,3 +21,26 @@ Go to http://localhost:3000 in any browser
 admin@admin.com
 P@ssw0rd
 ```
+
+### Deploy to heroku
+```
+https://dev.to/dibasdauliya/nextjs-blog-with-strapi-deploy-to-heroku-and-vercel-48e
+```
+
+### Buildpacks to use in Heroku
+```
+https://github.com/timanovsky/subdir-heroku-buildpack
+heroku/nodejs
+```
+
+### Config values to put in Heroku
+DATABASE_URL = Get your DB url from its postgres sql addon
+
+HEROKU_URL = your app url
+
+NEXT_PUBLIC_STRAPI_API_URL = your app url
+
+NODE_ENV = production
+
+PROJECT_PATH = your strapi root folder i.e, backend
+
