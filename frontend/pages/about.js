@@ -5,6 +5,7 @@ import { fetchAPI } from "../lib/api";
 import "react-quill/dist/quill.snow.css";
 
 function About({ categories, homepage, about }) {
+	// To avoid errors because QuillJS doesn't support React
 	const ReactQuill =
 		typeof window === "object" ? require("react-quill") : () => false;
 	const modules = {

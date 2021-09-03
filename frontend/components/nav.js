@@ -30,6 +30,11 @@ const Nav = ({ categories }) => {
 								</li>
 							);
 						})}
+						<li>
+							<Link href="/about">
+								<a>About</a>
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</nav>
