@@ -14,12 +14,15 @@ function About({ categories, homepage, about }) {
 	return (
 		<Layout categories={categories}>
 			<Seo seo={homepage.seo} />
+			<h3>React Quill Section</h3>
 			<ReactQuill
 				theme="snow"
 				readOnly={true}
 				value={about.profile}
 				modules={modules}
 			/>
+			<h3>Normal Section</h3>
+			{about.education}
 		</Layout>
 	);
 }
